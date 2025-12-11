@@ -260,9 +260,24 @@ export default function ProductFilter({ make, products, allProducts, searchParam
                         <ul className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xxl:grid-cols-3 xxs:grid-cols-2 xs:grid-cols-2 xs:gap-2 s:gap-2 xxs:gap-2 md:gap-2 s:grid-cols-2 sm:grid-cols-2 sm:gap-2 gap-6 xl:gap-3 xxl:gap-3 lg:gap-3">
                             {products.length > 0 ? (
                                 products.map(product => {
-                                    const compat = product.compatibility.find(
-                                        c =>
-                                            c.make.toLowerCase() === make.toLowerCase());
+                                    // === 3-DAY ROTATION LOGIC (inline) === //
+                                    const compatList = product.compatibility.filter(
+                                        c => c.make.toLowerCase() === make.toLowerCase()
+                                    );
+
+                                    let compat = null;
+
+                                    if (compatList.length > 0) {
+                                        const now = new Date();
+
+                                        const days = Math.floor(now.getTime() / (1000 * 60 * 60 * 24));
+
+                                        const rotationPeriod = Math.floor(days / 3);
+
+                                        const index = (rotationPeriod + product.id) % compatList.length;
+
+                                        compat = compatList[index];
+                                    }
 
                                     const slug = `${product.partname}-${make}-${compat?.model ? `${compat.model}` : ""
                                         }${compat?.years ? `-${compat.years}` : ""

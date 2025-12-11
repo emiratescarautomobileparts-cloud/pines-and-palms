@@ -4755,5 +4755,155 @@
                 "Cash on Delivery"
             ]
         }
+    },
+    {
+        "id": 52,
+        "subcategory": "Headlight Assembly",
+        "category": "Lighting & Lamps",
+        "partname": "Headlight Lamp Assembly Halogen Right",
+        "partnumber": "26010-3TA9A",
+        "availability": "Inquire Now",
+        "compatibility": [
+            {
+                "make": "Nissan",
+                "model": "Altima",
+                "years": "2013",
+                "engine": "2.5L,3.5L"
+            },
+            {
+                "make": "Nissan",
+                "model": "Altima",
+                "years": "2014",
+                "engine": "2.5L,3.5L"
+            },
+            {
+                "make": "Nissan",
+                "model": "Altima",
+                "years": "2015",
+                "engine": "2.5L,3.5L"
+            },
+            {
+                "make": "Nissan",
+                "model": "Altima",
+                "years": "2016",
+                "engine": "2.5L,3.5L"
+            }
+        ],
+        "engine": [
+            "1.8",
+            "1.9",
+            "2.0"
+        ],
+        "image": "/img/nissan/headlight053.webp",
+        "item_specifics": {
+            "sku": "NIS0002",
+            "Brand": "Nissan Motor Corporation",
+            "Manufacturer Part Number": "260103TA9A",
+            "Other Part Number": [],
+            "Interchange Part Number": [
+                "Nissan 26010-3TA9A, Nissan 26010-3TA0B, DS721-B0A12"
+            ],
+            "Placement on Vehicle": [
+                "Right"
+            ],
+            "Condition": "New",
+            "Material": "Plastic Lens",
+            "Warranty": "Inquire to check",
+            "Country/Region of Manufacture": "Japan",
+            "OEM or Aftermarket": "Genuine",
+            "Surface Finish": "Smooth",
+            "Fitment Type": "Direct Replacement",
+            "UPC": ""
+        },
+        "pricing": {
+            "price": 544,
+            "price_info": "*Prices reflects the latest compared average online market values for Genuine Nissan Motor Corporation Headlight Lamp Assembly Halogen Right. Inquiry is recommended to confirm compatibility, Affordable Aftermarket replacement options and final pricing.",
+            "currency": "AED",
+            "discounted_price": 0,
+            "offer": "0% OFF"
+        },
+        "policies": {
+            "shipping": "Standard Shipping (3-5 Business Days)",
+            "delivery": "Delivery available in UAE",
+            "returns": "",
+            "payment_methods": [
+                "Cash on Delivery"
+            ]
+        }
+    },
+    {
+        "id": 53,
+        "subcategory": "Headlight Assembly",
+        "category": "Lighting & Lamps",
+        "partname": "Headlight Lamp Assembly Halogen Left",
+        "partnumber": "26010-3TA9B",
+        "availability": "Inquire Now",
+        "compatibility": [
+            {
+                "make": "Nissan",
+                "model": "Altima",
+                "years": "2013",
+                "engine": "2.5L,3.5L"
+            },
+            {
+                "make": "Nissan",
+                "model": "Altima",
+                "years": "2014",
+                "engine": "2.5L,3.5L"
+            },
+            {
+                "make": "Nissan",
+                "model": "Altima",
+                "years": "2015",
+                "engine": "2.5L,3.5L"
+            },
+            {
+                "make": "Nissan",
+                "model": "Altima",
+                "years": "2016",
+                "engine": "2.5L,3.5L"
+            }
+        ],
+        "engine": [
+            "1.8",
+            "1.9",
+            "2.0"
+        ],
+        "image": "/img/nissan/headlight052.jpeg",
+        "item_specifics": {
+            "sku": "NIS0003",
+            "Brand": "Nissan Motor Corporation",
+            "Manufacturer Part Number": "260103TA9B",
+            "Other Part Number": [],
+            "Interchange Part Number": [
+                "Nissan 26010-3TA9A, Nissan 26010-3TA0B, DS721-B0A13"
+            ],
+            "Placement on Vehicle": [
+                "Left"
+            ],
+            "Condition": "New",
+            "Material": "Plastic Lens",
+            "Warranty": "Inquire to check",
+            "Country/Region of Manufacture": "Japan",
+            "OEM or Aftermarket": "Genuine",
+            "Surface Finish": "Smooth",
+            "Fitment Type": "Direct Replacement",
+            "UPC": ""
+        },
+        "pricing": {
+            "price": 544,
+            "price_info": "*Prices reflects the latest compared average online market values for Genuine Nissan Motor Corporation Headlight Lamp Assembly Halogen Left. Inquiry is recommended to confirm compatibility, Affordable Aftermarket replacement options and final pricing.",
+            "currency": "AED",
+            "discounted_price": 0,
+            "offer": "0% OFF"
+        },
+        "policies": {
+            "shipping": "Standard Shipping (3-5 Business Days)",
+            "delivery": "Delivery available in UAE",
+            "returns": "",
+            "payment_methods": [
+                "Cash on Delivery"
+            ]
+        }
     }
 ]
