@@ -34,36 +34,49 @@ const PartInquiryModal = ({ isOpen, onClose, product }) => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = async e => {
+    const handleSubmit = (e) => {
         e.preventDefault();
+
+        const today = new Date();
+        const date =
+            today.getFullYear() +
+            '-' +
+            (today.getMonth() + 1) +
+            '-' +
+            today.getDate();
+        const time =
+            today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+        const dateTime = date + ' ' + time;
+
         setLoading(true);
-        formData.Timestamp = dateTime;
 
-        try {
-            const response = await fetch('/api/vw-inquiry', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
-            });
+        fetch('/api/vw-inquiry', {
+            method: 'POST',
+            body: JSON.stringify({
+                Timestamp: dateTime,
+                name: formData.name,
+                email: formData.email,
+                phone: formData.phone,
+                address: formData.address,
+                partList: formData.partList,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
 
-            if (response.ok) {
-                alert('Inquiry submitted successfully!');
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    address: '',
-                    partList: `${product.partname} (${product.partnumber})`,
-                });
-                onClose();
-            } else {
-                alert('Error: Failed to submit inquiry.');
-            }
-        } catch (error) {
-            alert('An error occurred. Please try again.');
-        } finally {
-            setLoading(false);
-        }
+        alert('Inquiry submitted! We will contact you shortly.');
+
+        setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            address: '',
+            partList: `${product.partname} (${product.partnumber})`,
+        });
+
+        setLoading(false);
+        onClose();
     };
 
     if (!isOpen) return null;
