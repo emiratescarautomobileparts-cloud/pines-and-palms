@@ -4905,5 +4905,563 @@
                 "Cash on Delivery"
             ]
         }
+    },
+    {
+        "id": 54,
+        "subcategory": "Headlight Assembly",
+        "category": "Lighting & Lamps",
+        "partname": "Passenger side Headlamp Assembly",
+        "partnumber": 10396912,
+        "availability": "Inquire Now",
+        "compatibility": [
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500",
+                "years": "2007",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500 Classic",
+                "years": "2007",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Electric/Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500 HD Classic",
+                "years": "2007",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD",
+                "years": "2007",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD Classic",
+                "years": "2007",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500 Classic",
+                "years": "2007",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500 HD",
+                "years": "2007",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 1500",
+                "years": "2006",
+                "engine": "5.3L V8 - Flex,5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 2500",
+                "years": "2006",
+                "engine": "8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500",
+                "years": "2006",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Electric/Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500 HD",
+                "years": "2006",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD",
+                "years": "2006",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500",
+                "years": "2006",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Suburban 1500",
+                "years": "2006",
+                "engine": "5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Suburban 2500",
+                "years": "2006",
+                "engine": "6.0L V8 - Gas,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Tahoe",
+                "years": "2006",
+                "engine": "4.8L V8 - Gas,5.3L V8 - Flex,5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 1500",
+                "years": "2005",
+                "engine": "5.3L V8 - Flex,5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 2500",
+                "years": "2005",
+                "engine": "8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500",
+                "years": "2005",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Electric/Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500 HD",
+                "years": "2005",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD",
+                "years": "2005",
+                "engine": "6.0L V8 - CNG,6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500",
+                "years": "2005",
+                "engine": "6.0L V8 - CNG,6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Suburban 1500",
+                "years": "2005",
+                "engine": "5.3L V8 - Flex,5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Suburban 2500",
+                "years": "2005",
+                "engine": "6.0L V8 - Gas,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Tahoe",
+                "years": "2005",
+                "engine": "4.8L V8 - Gas,5.3L V8 - Flex,5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 1500",
+                "years": "2004",
+                "engine": "5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 2500",
+                "years": "2004",
+                "engine": "8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500",
+                "years": "2004",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Electric/Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500",
+                "years": "2004",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD",
+                "years": "2004",
+                "engine": "6.0L V8 - CNG,6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500",
+                "years": "2004",
+                "engine": "6.0L V8 - CNG,6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 1500",
+                "years": "2003",
+                "engine": "5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 2500",
+                "years": "2003",
+                "engine": "8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500",
+                "years": "2003",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500 HD",
+                "years": "2003",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500",
+                "years": "2003",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD",
+                "years": "2003",
+                "engine": "6.0L V8 - CNG,6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500",
+                "years": "2003",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            }
+        ],
+        "engine": [
+            "1.8",
+            "1.9",
+            "2.0"
+        ],
+        "image": "/img/chevrolet/headlight0054.webp",
+        "item_specifics": {
+            "sku": "GM0001",
+            "Brand": "GM Genuine",
+            "Manufacturer Part Number": 10396912,
+            "Other Part Number": [],
+            "Interchange Part Number": [
+                "10366038, 15183879, 15207080, 15207138, 15766528"
+            ],
+            "Placement on Vehicle": [
+                "Right Front, Right Passenger"
+            ],
+            "Condition": "New",
+            "Material": "Plastic Lens",
+            "Warranty": "Inquire to check",
+            "Country/Region of Manufacture": "USA, Mexico, China, Korean",
+            "OEM or Aftermarket": "Genuine",
+            "Surface Finish": "Smooth",
+            "Fitment Type": "Direct Replacement",
+            "UPC": ""
+        },
+        "pricing": {
+            "price": 882,
+            "price_info": "*Prices reflects the latest compared average online market values for Genuine GM Genuine Passenger side Headlamp Assembly. Inquiry is recommended to confirm compatibility, Affordable Aftermarket replacement options and final pricing.",
+            "currency": "AED",
+            "discounted_price": 0,
+            "offer": "0% OFF"
+        },
+        "policies": {
+            "shipping": "Standard Shipping (3-5 Business Days)",
+            "delivery": "Delivery available in UAE",
+            "returns": "",
+            "payment_methods": [
+                "Cash on Delivery"
+            ]
+        }
+    },
+    {
+        "id": 55,
+        "subcategory": "Headlight Assembly",
+        "category": "Lighting & Lamps",
+        "partname": "Driver Side Headlamp Assembly",
+        "partnumber": 10396913,
+        "availability": "Inquire Now",
+        "compatibility": [
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500",
+                "years": "2007",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500 Classic",
+                "years": "2007",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Electric/Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500 HD Classic",
+                "years": "2007",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD",
+                "years": "2007",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD Classic",
+                "years": "2007",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500 Classic",
+                "years": "2007",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500 HD",
+                "years": "2007",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 1500",
+                "years": "2006",
+                "engine": "5.3L V8 - Flex,5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 2500",
+                "years": "2006",
+                "engine": "8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500",
+                "years": "2006",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Electric/Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500 HD",
+                "years": "2006",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD",
+                "years": "2006",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500",
+                "years": "2006",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Suburban 1500",
+                "years": "2006",
+                "engine": "5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Suburban 2500",
+                "years": "2006",
+                "engine": "6.0L V8 - Gas,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Tahoe",
+                "years": "2006",
+                "engine": "4.8L V8 - Gas,5.3L V8 - Flex,5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 1500",
+                "years": "2005",
+                "engine": "5.3L V8 - Flex,5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 2500",
+                "years": "2005",
+                "engine": "8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500",
+                "years": "2005",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Electric/Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500 HD",
+                "years": "2005",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD",
+                "years": "2005",
+                "engine": "6.0L V8 - CNG,6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500",
+                "years": "2005",
+                "engine": "6.0L V8 - CNG,6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Suburban 1500",
+                "years": "2005",
+                "engine": "5.3L V8 - Flex,5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Suburban 2500",
+                "years": "2005",
+                "engine": "6.0L V8 - Gas,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Tahoe",
+                "years": "2005",
+                "engine": "4.8L V8 - Gas,5.3L V8 - Flex,5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 1500",
+                "years": "2004",
+                "engine": "5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 2500",
+                "years": "2004",
+                "engine": "8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500",
+                "years": "2004",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Electric/Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500",
+                "years": "2004",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD",
+                "years": "2004",
+                "engine": "6.0L V8 - CNG,6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500",
+                "years": "2004",
+                "engine": "6.0L V8 - CNG,6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 1500",
+                "years": "2003",
+                "engine": "5.3L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Avalanche 2500",
+                "years": "2003",
+                "engine": "8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500",
+                "years": "2003",
+                "engine": "4.3L V6 - Gas,4.8L V8 - Gas,5.3L V8 - Flex,5.3L V8 - Gas,6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 1500 HD",
+                "years": "2003",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500",
+                "years": "2003",
+                "engine": "6.0L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 2500 HD",
+                "years": "2003",
+                "engine": "6.0L V8 - CNG,6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            },
+            {
+                "make": "Chevrolet",
+                "model": "Silverado 3500",
+                "years": "2003",
+                "engine": "6.0L V8 - Gas,6.6L V8 - Diesel,8.1L V8 - Gas"
+            }
+        ],
+        "engine": [
+            "1.8",
+            "1.9",
+            "2.0"
+        ],
+        "image": "/img/chevrolet/headlight0055.webp",
+        "item_specifics": {
+            "sku": "GM0002",
+            "Brand": "GM Genuine",
+            "Manufacturer Part Number": 10396913,
+            "Other Part Number": [],
+            "Interchange Part Number": [
+                "10366037, 15183878, 15207079, 15207137, 15766527"
+            ],
+            "Placement on Vehicle": [
+                "Left Front, Left Driver Side"
+            ],
+            "Condition": "New",
+            "Material": "Plastic Lens",
+            "Warranty": "Inquire to check",
+            "Country/Region of Manufacture": "USA, Mexico, China, Korean",
+            "OEM or Aftermarket": "Genuine",
+            "Surface Finish": "Smooth",
+            "Fitment Type": "Direct Replacement",
+            "UPC": ""
+        },
+        "pricing": {
+            "price": 877,
+            "price_info": "*Prices reflects the latest compared average online market values for Genuine GM Genuine Driver Side Headlamp Assembly. Inquiry is recommended to confirm compatibility, Affordable Aftermarket replacement options and final pricing.",
+            "currency": "AED",
+            "discounted_price": 0,
+            "offer": "0% OFF"
+        },
+        "policies": {
+            "shipping": "Standard Shipping (3-5 Business Days)",
+            "delivery": "Delivery available in UAE",
+            "returns": "",
+            "payment_methods": [
+                "Cash on Delivery"
+            ]
+        }
     }
 ]
