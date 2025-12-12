@@ -40,6 +40,22 @@ import PartsAccordion from '../../../../components/Parts-Accordion';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { redirect } from 'next/navigation';
+import ProductFilter from './ProductFilter';
+import products from "../../../../public/products.json"
+import { Fira_Sans, Playfair_Display } from 'next/font/google';
+
+const playfair_display = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-playfair-display',
+});
+
+const firaSans = Fira_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-fira-sans',
+});
 
 export async function generateStaticParams({ params }) {
 
@@ -192,20 +208,7 @@ export async function generateMetadata({ params }) {
       canonical: `https://www.emirates-car.com/search-by-brands-in-uae/${make}/${location}`,
     },
     category: `${make} ${decodeURIComponent(location)} auto spare parts`,
-    keywords: `${make} spare parts ${decodeURIComponent(location)}, used ${make} spare parts ${decodeURIComponent(location)},
-     ${make} spare parts near me, ${make} spark plugs in ${decodeURIComponent(
-      location,
-    )}, ${make} ${decodeURIComponent(
-      location,
-    )} distributor, ${make} ${decodeURIComponent(
-      location,
-    )} shock absorber, ${make} fender in ${decodeURIComponent(
-      location,
-    )}, ${make} fuse box in ${decodeURIComponent(
-      location,
-    )}, ${make} radiator in ${decodeURIComponent(
-      location,
-    )}, ${make} fuel pump in ${decodeURIComponent(location)}`,
+
     other: {
       "script:ld+json": JSON.stringify(faqSchema),
     },
@@ -242,13 +245,52 @@ async function getLocation(make) {
   return uniqueObjectArray;
 }
 
-export default async function Cities({ params }) {
+export default async function Cities({ params, searchParams }) {
   const { make, location } = params;
   const carmodel = await getModel(make);
   const partspost = await getParts();
   const cities = await getCity();
   const posts = await getMake();
   const modelsform = await getFormModel();
+
+  const {
+    "filter_car_parts[]": categories = [],
+    "engine[]": engines = [],
+    "compatibility[]": compats = [],
+    search = ""
+  } = searchParams;
+
+
+  const selectedCategories = Array.isArray(categories) ? categories : [categories].filter(Boolean);
+  const selectedEngines = Array.isArray(engines) ? engines : [engines].filter(Boolean);
+  const selectedCompats = Array.isArray(compats) ? compats : [compats].filter(Boolean);
+  const query = search?.toLowerCase() || "";
+
+  const makeFiltered = products.filter(product =>
+    product.compatibility?.some(c =>
+      c.make.toLowerCase() === make.toLowerCase()
+    )
+  )
+
+  const filtered = makeFiltered.filter(product => {
+    const matchesCategory =
+      selectedCategories.length === 0 || selectedCategories.includes(product.category);
+
+    const matchesSearch =
+      product.partname.toLowerCase().includes(query) ||
+      product.partnumber.toLowerCase().includes(query) ||
+      product.engine?.some(e => e.toLowerCase().includes(query)) ||
+      product.compatibility?.some(c =>
+        `${c.make} ${c.model} ${c.years ?? ""}`.toLowerCase().includes(query))
+
+    const matchesEngine =
+      selectedEngines.length === 0 || product.engine?.some(e => selectedEngines.includes(e));
+
+    const matchesCompatibility =
+      selectedCompats.length === 0 ||
+      product.compatibility?.some(c => selectedCompats.includes(`${c.make} ${c.model} ${c.years ? `(${c.years})` : ""}`));
+    return matchesCategory && matchesSearch && matchesEngine && matchesCompatibility;
+  });
 
   const excludedMakes = [
     'Acura', 'Buick', 'Eagle', 'Lotus', 'Plymouth', 'Pontiac', 'Saab', 'Subaru',
@@ -270,146 +312,146 @@ export default async function Cities({ params }) {
   const images = [
     {
       images: ABS,
-      name: `${make} ABS`,
-      alt: `${make} anti lock braking system`,
+      name: `${make} ABS in ${decodeURIComponent(location)}`,
+      alt: `${make} anti lock braking system ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Anti-Lock%20Brake%20Control%20Module%20(ABS)',
     },
     {
       images: AirFilter,
-      name: `${make} Air Filter`,
-      alt: `${make} air filter`,
+      name: `${make} Air Filter in ${decodeURIComponent(location)}`,
+      alt: `${make} air filter ${decodeURIComponent(location)}`,
       link: '/get-in-touch',
     },
     {
       images: AirSuspension,
-      name: `${make} Air Suspension`,
-      alt: `${make} Air suspension`,
+      name: `${make} Air Suspension in ${decodeURIComponent(location)}`,
+      alt: `${make} Air suspension ${decodeURIComponent(location)}`,
       link: '/get-in-touch',
     },
     {
       images: AxleAssembly,
-      name: `${make} Axle`,
-      alt: `${make} axle`,
+      name: `${make} Axle in ${decodeURIComponent(location)}`,
+      alt: `${make} axle ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Axle%20Assembly%20(Front,%204WD)',
     },
     {
       images: BrakePads,
-      name: `${make} Brake Pads`,
-      alt: `${make} brake pads`,
+      name: `${make} Brake Pads in ${decodeURIComponent(location)}`,
+      alt: `${make} brake pads ${decodeURIComponent(location)}`,
       link: '/get-in-touch',
     },
     {
       images: CatalyticConverter,
-      name: `${make} Catalytic Convertor`,
-      alt: `${make} catalytic convertor`,
+      name: `${make} Catalytic Convertor in ${decodeURIComponent(location)}`,
+      alt: `${make} catalytic convertor ${decodeURIComponent(location)}`,
       link: '/get-in-touch',
     },
     {
       images: CylinderHead,
-      name: `${make} Cylinder Head`,
-      alt: `${make} cylinder`,
+      name: `${make} Cylinder Head in ${decodeURIComponent(location)}`,
+      alt: `${make} cylinder ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Cylinder%20Head)',
     },
     {
       images: Distributor,
-      name: `${make} Distributor`,
-      alt: `${make} distributor`,
+      name: `${make} Distributor in ${decodeURIComponent(location)}`,
+      alt: `${make} distributor ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Distributor',
     },
     {
       images: Engine,
-      name: `${make} Engine`,
-      alt: `${make} Engine`,
+      name: `${make} Engine in ${decodeURIComponent(location)}`,
+      alt: `${make} Engine ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Engine%20Assembly',
     },
     {
       images: ExhaustManifold,
-      name: `${make} Exhaust Manifold`,
-      alt: `${make} exhaust system`,
+      name: `${make} Exhaust Manifold in ${decodeURIComponent(location)}`,
+      alt: `${make} exhaust system ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Exhaust%20Manifold',
     },
     {
       images: GearBox,
-      name: `${make} Gearbox / Transmission`,
-      alt: `${make} gearbox`,
+      name: `${make} Gearbox / Transmission in ${decodeURIComponent(location)}`,
+      alt: `${make} gearbox ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Transmission%20Control%20Module',
     },
     {
       images: Grille,
-      name: `${make} grill`,
-      alt: `${make} grill`,
+      name: `${make} grill in ${decodeURIComponent(location)}`,
+      alt: `${make} grill ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Grille',
     },
     {
       images: Headlight,
-      name: `${make} Headlight`,
-      alt: `${make} headlight bulb`,
+      name: `${make} Headlight in ${decodeURIComponent(location)}`,
+      alt: `${make} headlight bulb ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Headlight%20Assembly',
     },
     {
       images: MasterCylinderKit,
-      name: `${make} Master Cylinder`,
-      alt: `${make} master cylinder`,
+      name: `${make} Master Cylinder in ${decodeURIComponent(location)}`,
+      alt: `${make} master cylinder ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Master%20Cylinder%20(Clutch)',
     },
     {
       images: MudFlap,
-      name: `${make} Mud Flaps`,
-      alt: `${make} mud flaps`,
+      name: `${make} Mud Flaps in ${decodeURIComponent(location)}`,
+      alt: `${make} mud flaps ${decodeURIComponent(location)}`,
       link: '/get-in-touch',
     },
     {
       images: Radiator,
-      name: `${make} Radiator`,
-      alt: `${make} radiator`,
+      name: `${make} Radiator in ${decodeURIComponent(location)}`,
+      alt: `${make} radiator ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Radiator',
     },
     {
       images: RearBumper,
-      name: `${make} Rear Bumper`,
-      alt: `${make} rear bumper`,
+      name: `${make} Rear Bumper in ${decodeURIComponent(location)}`,
+      alt: `${make} rear bumper ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Bumper%20Assembly%20(Rear)',
     },
     {
       images: ReverseLight,
-      name: `${make} Reverse Light`,
-      alt: `${make} reverse light`,
+      name: `${make} Reverse Light in ${decodeURIComponent(location)}`,
+      alt: `${make} reverse light ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Reverse%20Light',
     },
     {
       images: Rim,
-      name: `${make} Rims`,
-      alt: `${make} Rims for sale`,
+      name: `${make} Rims in ${decodeURIComponent(location)}`,
+      alt: `${make} Rims for sale ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Rim',
     },
     {
       images: SeatBelt,
-      name: `${make} Seat Belt`,
-      alt: `${make} seat belt`,
+      name: `${make} Seat Belt in ${decodeURIComponent(location)}`,
+      alt: `${make} seat belt ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Seat%20Belt',
     },
     {
       images: ShockAbsorber,
-      name: `${make} Shock Absorber`,
-      alt: `${make} shock absorber`,
+      name: `${make} Shock Absorber in ${decodeURIComponent(location)}`,
+      alt: `${make} shock absorber ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Shock%20Absorber',
     },
     {
       images: SideMirror,
-      name: `${make} Mirror`,
-      alt: `${make} mirrors`,
+      name: `${make} Mirror in ${decodeURIComponent(location)}`,
+      alt: `${make} mirrors ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Mirror%20(Rear%20View)',
     },
     {
       images: SteeringWheel,
-      name: `${make} Steering Wheel`,
-      alt: `${make} steering wheel`,
+      name: `${make} Steering Wheel in ${decodeURIComponent(location)}`,
+      alt: `${make} steering wheel ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Steering%20Wheel',
     },
     {
       images: Wheel,
-      name: `${make} wheels`,
-      alt: `${make} wheels`,
+      name: `${make} wheels in ${decodeURIComponent(location)}`,
+      alt: `${make} wheels ${decodeURIComponent(location)}`,
       link: '/search-by-part-name/Wheel',
     },
   ];
@@ -422,17 +464,18 @@ export default async function Cities({ params }) {
               <div className="ml-8 md:ml-8 xs:ml-1 xxs:ml-4 xxs:mt-8 xs:px-5 sm:ml-6 lg:ml-1 xl:ml-20 sm:mx-auto mt-10 sm:mt-12 md:mt-10 lg:mt-20 lg:px-8 xl:mt-28 xs:mt-2 xs:text-left s:mt-2">
                 <div className="lg:text-left">
                   <h1 className="mt-3 text-3xl lg:text-4xl sm:text-lg xs:text-xl xxs:text-xl md:text-xl font-head font-extrabold">
-                    Genuine <span className="text-blue-600 xl:inline">
+                    <span className="text-blue-600 xl:inline">
+
                       {encodeURIComponent(make)}
-                    </span> Spare Parts in {decodeURIComponent(location)}, UAE&nbsp;
+                    </span> Spare Parts in {decodeURIComponent(location)}, UAE&nbsp;| Used, New, Genuine & Aftermarket
                   </h1>
                   <p className="block xxl:text-xl sm:text-sm xs:text-base xxs:text-base md:text-lg lg:text-2xl font-medium font-poppins text-gray-800  lg:leading-tight pt-5">
-                    Get authentic {encodeURIComponent(make)}&nbsp; parts for all models — fast delivery across {decodeURIComponent(location)}, UAE&nbsp;
+                    Get High Quality {encodeURIComponent(make)}&nbsp; parts for all models — fast delivery across {decodeURIComponent(location)}, UAE&nbsp;
                   </p>
                   <div className="mt-5 sm:mt-5 xxs:my-5 xs:my-5 lg:justify-start">
                     <div className="py-3 px-4 sm:py-0 sm:px-0 w-1/2 lg:w-full xs:w-full xxs:w-3/4 xs:mx-auto s:w-full sm:w-3/4 md:w-full md:mx-auto md:px-0 md:py-0 xs:py-0 xs:px-0 xxs:px-0 xxs:py-0 lg:px-0 lg:py-0 xl:px-0 xl:py-0 xxl:px-0 xxl:py-0 rounded-lg shadow-md sm:shadow-none">
                       <a
-                        href={'/search-by-make/' + make + '#myForm'}
+                        href={'/search-by-brands-in-uae/' + make + '#myForm'}
                         title="vehicle parts online"
                         className="flex items-center justify-center py-2 xs:py-2 xxs:py-1 sm:py-0 text-xl sm:text-base xl:text-xl border border-transparent font-medium rounded-sm text-white bg-blue-600 hover:bg-blue-700 md:py-2 md:text-md md:text-lg md:px-5 xs:text-sm xxs:text-sm xxs:my-2 lg:my-2 s:text-sm s:my-2 focus:filter brightness-125"
                       >
@@ -444,7 +487,7 @@ export default async function Cities({ params }) {
               </div>
             </div>
             <div className="xxs:hidden xs:hidden hero_section_blob s:hidden">
-              <Image src={Hero_img} alt="car spare parts online" priority />
+              <Image src={Hero_img} alt={`${make} spare parts in ${decodeURIComponent(location)}`} priority />
             </div>
           </div>
         </div>
@@ -452,23 +495,7 @@ export default async function Cities({ params }) {
       <section className='#myForm'>
         <FormComponent formsData={modelsform} postFilter={partspost} />
       </section>
-      <div>
-        <p className="py-5 xxs:px-7 sm:px-7 s:py-6 lg:mx-6 md:mx-6 xs:mx-2 xxs:mx-2 max-w-7xl mx-auto">
-          Searching for reliable {make} parts in the{' '}
-          {decodeURIComponent(location)} UAE? Whether you're looking for
-          genuine, used, or aftermarket parts, Emirates Auto Parts has you
-          covered. We stock a wide range of parts for popular {make} models,
-          including the{' '}
-          {carmodel
-            .slice(0, 5)
-            .map(c => c.make + ' ' + c.model)
-            .join(', ')}
-          , and many more. With fast shipping to Dubai, Sharjah, and across
-          the UAE, and a commitment to quality, we ensure your {make} remains
-          road-ready. Explore our inventory and enjoy quality parts backed by
-          expert support
-        </p>
-      </div>
+
       <div>
         <div className="bg-bglight">
           <h3 className="text-black text-4xl my-10 text-center md:text-2xl lg:text-2xl font-bold xs:text-xl xxs:text-2xl pt-10">
@@ -486,15 +513,13 @@ export default async function Cities({ params }) {
                 <Link
                   href="/search-by-make/[make]/[model]"
                   as={'/search-by-make/' + post.make + '/' + post.model}
-                  title={post.make + post.model + ' spare parts' + location}
+                  title={post.make + " " + post.model + ' spare parts ' + location}
                 >
                   <div className="border-blue-800 h-full  hover:border-blue-900 bg-white rounded-sm">
                     <p className="text-center text-black text-sm font-medium hover:text-gray-800 p-2">
-                      {make +
-                        ' ' +
-                        post.model.replace('%2F', '/') +
-                        ' parts in ' +
-                        decodeURIComponent(location)}{' '}
+                      <span className='text-blue-600'>{make} {post.model}</span> {' '}
+                      parts in{' '}
+                      <span className='text-blue-600'>{decodeURIComponent(location)}</span>
                     </p>
                   </div>
                 </Link>
@@ -516,13 +541,22 @@ export default async function Cities({ params }) {
       <div className="text-center">
         {make === 'Honda' ? <HondaOfferButton /> : <></>}
       </div>
+
+      {makeFiltered.length > 0 ?
+        <ProductFilter
+          make={make}
+          products={filtered}
+          allProducts={makeFiltered}
+          searchParams={searchParams}
+          location={location}
+        /> : <></>}
       <div>
         <div className="text-black text-4xl my-10 text-center md:text-2xl lg:text-2xl font-bold xs:text-xl xxs:text-2xl pt-10">
           Popular{' '}
           <span className="text-blue-500">
             Searched {encodeURIComponent(make)} Parts
           </span>{' '}
-          in UAE
+          in {decodeURIComponent(location)}
         </div>
         <div className="grid grid-cols-5 sm:gril-cols-2 xxs:grid-cols-2 gap-2 s:grid-cols-2 xs:grid-cols-1 px-5 xs:px-2 xxs:px-2 md:grid-cols-3 lg:grid-cols-3 max-w-7xl mx-auto">
           {images.map((i, k) => (
@@ -556,61 +590,48 @@ export default async function Cities({ params }) {
           ))}
         </div>
       </div>
-      <div className="bg-bglight ">
-        <h3 className="text-black text-4xl my-10 text-center md:text-2xl lg:text-2xl font-bold xs:text-xl xxs:text-2xl pt-10">
-          Search{' '}
-          <span className="text-blue-500">{encodeURIComponent(make)}</span>{' '}
-          Spare parts Anywhere in {location}
-        </h3>
-        <SearchCity cities={cities} />
-        <div className="grid grid-cols-7 md:grid-cols-5 lg:grid-cols-7 mx-10 md:mx-4 sm:mx-3 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-5 xxs:grid xxs:grid-cols-5 s:grid s:grid-cols-3 gap-1 xs:mx-4 s:mx-4 xxs:mx-4 md:ml-11 my-10 pb-10 font-sans">
-          {cities.map((post, i) => (
-            <div key={i}>
-              <Link
-                href="/search-by-cities-in-uae/[city]"
-                as={'/search-by-cities-in-uae/' + post.city}
-                title={make + ' spare parts ' + post.city}
-              >
-                <div className="border-blue-800 h-full hover:border-blue-900 bg-white rounded-sm">
-                  <p className="text-center text-black font-medium text-sm hover:text-gray-800 p-2">
-                    {encodeURIComponent(make)} parts in {post.city}
-                  </p>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
       <TenEntries />
-      <div className="grid grid-cols-4 xs:ml-4 md:mx-4 sm:ml-0 xs:grid xs:grid-cols-2 sm:grid sm:grid-cols-3 md:grid md:grid-cols-3 2xs:grid 2xs:grid-cols-3 gap-1 2xs:mx-4 md:ml-11 mr-3 my-10 font-sans">
-        {posts.map((post, i) => (
-          <div key={i}>
-            <Link
-              href="/search-by-brands-in-uae/[make]/[location]"
-              as={'/search-by-brands-in-uae/' + post.make + '/' + location}
-              title={post.make + ' spare parts'}
-            >
-              <main className="text-center text-base xs:text-xs xs:text-center font-mono text-blue-500 underline hover:text-blue-700 focus:text-blue-700 border border-gray-100">
-                <div className="flex justify-center">
-                  <Image
-                    alt={post.make + ' parts uae'}
-                    src={'/img/car-logos/' + post.img}
-                    className="object-scale-down shadow-xl"
-                    height={30}
-                    width={30}
-                  />
-                  <br />
-                </div>
-                {post.make.toUpperCase()}
-              </main>
-            </Link>
-          </div>
-        ))}
-      </div>
+
+      <section
+        aria-labelledby={`all-${make}-brands`}
+        className="mt-10 shadow-sm mx-4 md:mx-4 lg:max-w-4xl lg:mx-auto xl:mx-10 bg-bglight px-5 md:px-20 lg:px-10"
+      >
+        <h2
+          id={`all-${make}-brands`}
+          className={`text-4xl md:text-3xl lg:text-3xl xs:text-2xl xxs:text-2xl font-semibold py-5 ${playfair_display.className}`}
+        >
+          Used, Genuine & Aftermarket parts for{" "}
+          <span className="text-blue-600">{make}</span> spare parts
+        </h2>
+
+        <ul className="grid grid-cols-6 md:grid-cols-5 xs:grid-cols-2 xxs:grid-cols-3 sm:grid-cols-3 xs:gap-2 xxs:gap-2 sm:gap-2 gap-4 my-10">
+          {posts.map((p, i) => (
+            <li key={i} className="list-none">
+              <Link
+                href="/search-by-brands-in-uae/[make]/[location]"
+                as={'/search-by-brands-in-uae/' + p.make + '/' + location}
+                title={p.make + ' spare parts in ' + location}
+                className="flex flex-col items-center justify-center border hover:border-blue-600 p-3 rounded-sm bg-white"
+              >
+                <Image
+                  alt={`${p.make} parts`}
+                  src={`/img/car-logos/${p.img}`}
+                  height={90}
+                  width={90}
+                  className="object-contain"
+                  priority
+                />
+                <span className={`mt-2 px-3 py-1 text-sm xl:text-2xl xxl:text-2xl font-medium font-sans text-white bg-blue-600 rounded-sm hover:bg-blue-700 text-center w-max ${firaSans.className}`}>
+                  {p.make}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <PartsAccordion make={make} location={location} />
       <Contents />
-      <Footer />
     </main>
-
   );
 }
