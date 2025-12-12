@@ -5739,5 +5739,131 @@
                 "Cash on Delivery"
             ]
         }
+    },
+    {
+        "id": 60,
+        "subcategory": "Headlight Assembly",
+        "category": "Lighting & Lamps",
+        "partname": "Passenger Side Headlamp Assembly",
+        "partnumber": 19433915,
+        "availability": "Inquire Now",
+        "compatibility": [
+            {
+                "make": "GMC",
+                "model": "Sierra 1500",
+                "years": "2014",
+                "engine": "4.3L,5.3L,6.2L"
+            },
+            {
+                "make": "GMC",
+                "model": "Sierra 1500",
+                "years": "2015",
+                "engine": "4.3L,5.3L,6.2L"
+            }
+        ],
+        "engine": [
+            "1.8",
+            "1.9",
+            "2.0"
+        ],
+        "image": "/img/gmc/headlight0060.png",
+        "item_specifics": {
+            "sku": "GM0007",
+            "Brand": "GM Genuine",
+            "Manufacturer Part Number": 19433915,
+            "Other Part Number": [],
+            "Interchange Part Number": [
+                "19433915,GM2502394,GM2503394, 23130717, 23268192, 23130718, 23268193"
+            ],
+            "Placement on Vehicle": [
+                "Right Front, Right Passenger"
+            ],
+            "Condition": "New",
+            "Material": "Plastic Lens",
+            "Warranty": "Inquire to check",
+            "Country/Region of Manufacture": "USA, Mexico, China, Korean",
+            "OEM or Aftermarket": "Genuine",
+            "Surface Finish": "Smooth",
+            "Fitment Type": "Direct Replacement",
+            "UPC": ""
+        },
+        "pricing": {
+            "price": 3845.42,
+            "price_info": "*Prices reflects the latest compared average online market values for Genuine GM Genuine Passenger Side Headlamp Assembly. Inquiry is recommended to confirm compatibility, Affordable Aftermarket replacement options and final pricing.",
+            "currency": "AED",
+            "discounted_price": 0,
+            "offer": "0% OFF"
+        },
+        "policies": {
+            "shipping": "Standard Shipping (3-5 Business Days)",
+            "delivery": "Delivery available in UAE",
+            "returns": "",
+            "payment_methods": [
+                "Cash on Delivery"
+            ]
+        }
+    },
+    {
+        "id": 61,
+        "subcategory": "Headlight Assembly",
+        "category": "Lighting & Lamps",
+        "partname": "Driver Side Headlamp Assembly",
+        "partnumber": 19433914,
+        "availability": "Inquire Now",
+        "compatibility": [
+            {
+                "make": "GMC",
+                "model": "Sierra 1500",
+                "years": "2014",
+                "engine": "4.3L,5.3L,6.2L"
+            },
+            {
+                "make": "GMC",
+                "model": "Sierra 1500",
+                "years": "2015",
+                "engine": "4.3L,5.3L,6.2L"
+            }
+        ],
+        "engine": [
+            "1.8",
+            "1.9",
+            "2.0"
+        ],
+        "image": "/img/gmc/headlight0060.png",
+        "item_specifics": {
+            "sku": "GM0008",
+            "Brand": "GM Genuine",
+            "Manufacturer Part Number": 19433914,
+            "Other Part Number": [],
+            "Interchange Part Number": [
+                "19433914, GM2502394,GM2503394, 23130717, 23268192, 23130718, 23268193"
+            ],
+            "Placement on Vehicle": [
+                "Left Front, Left Driver Side"
+            ],
+            "Condition": "New",
+            "Material": "Plastic Lens",
+            "Warranty": "Inquire to check",
+            "Country/Region of Manufacture": "USA, Mexico, China, Korean",
+            "OEM or Aftermarket": "Genuine",
+            "Surface Finish": "Smooth",
+            "Fitment Type": "Direct Replacement",
+            "UPC": ""
+        },
+        "pricing": {
+            "price": 4126.91,
+            "price_info": "*Prices reflects the latest compared average online market values for Genuine GM Genuine Driver Side Headlamp Assembly. Inquiry is recommended to confirm compatibility, Affordable Aftermarket replacement options and final pricing.",
+            "currency": "AED",
+            "discounted_price": 0,
+            "offer": "0% OFF"
+        },
+        "policies": {
+            "shipping": "Standard Shipping (3-5 Business Days)",
+            "delivery": "Delivery available in UAE",
+            "returns": "",
+            "payment_methods": [
+                "Cash on Delivery"
+            ]
+        }
     }
 ]
