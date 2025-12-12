@@ -5625,5 +5625,119 @@
                 "Cash on Delivery"
             ]
         }
+    },
+    {
+        "id": 58,
+        "subcategory": "Headlight Assembly",
+        "category": "Lighting & Lamps",
+        "partname": "Passenger Side Headlamp Assembly",
+        "partnumber": "F87Z13008EB",
+        "availability": "Inquire Now",
+        "compatibility": [
+            {
+                "make": "Ford",
+                "model": "Ranger",
+                "years": "1998-2000",
+                "engine": "2.5L,3.0L,4.0L"
+            }
+        ],
+        "engine": [
+            "1.8",
+            "1.9",
+            "2.0"
+        ],
+        "image": "/img/ford/headlight0058.png",
+        "item_specifics": {
+            "sku": "GM0005",
+            "Brand": "GM Genuine",
+            "Manufacturer Part Number": "F87Z13008EA",
+            "Other Part Number": [],
+            "Interchange Part Number": [
+                "F87Z-13008-EA"
+            ],
+            "Placement on Vehicle": [
+                "Right Front, Right Passenger"
+            ],
+            "Condition": "New",
+            "Material": "Polycarbonate plastic",
+            "Warranty": "Inquire to check",
+            "Country/Region of Manufacture": "Ford Motor Company",
+            "OEM or Aftermarket": "Genuine",
+            "Surface Finish": "Smooth",
+            "Fitment Type": "Direct Replacement",
+            "UPC": ""
+        },
+        "pricing": {
+            "price": 205.86,
+            "price_info": "*Prices reflects the latest compared average online market values for Genuine GM Genuine Passenger Side Headlamp Assembly. Inquiry is recommended to confirm compatibility, Affordable Aftermarket replacement options and final pricing.",
+            "currency": "AED",
+            "discounted_price": 0,
+            "offer": "0% OFF"
+        },
+        "policies": {
+            "shipping": "Standard Shipping (3-5 Business Days)",
+            "delivery": "Delivery available in UAE",
+            "returns": "",
+            "payment_methods": [
+                "Cash on Delivery"
+            ]
+        }
+    },
+    {
+        "id": 59,
+        "subcategory": "Headlight Assembly",
+        "category": "Lighting & Lamps",
+        "partname": "Driver Side Headlamp Assembly",
+        "partnumber": "F87Z13008FB",
+        "availability": "Inquire Now",
+        "compatibility": [
+            {
+                "make": "Ford",
+                "model": "Ranger",
+                "years": "1998-2000",
+                "engine": "2.5L,3.0L,4.0L"
+            }
+        ],
+        "engine": [
+            "1.8",
+            "1.9",
+            "2.0"
+        ],
+        "image": "/img/ford/headlight0059.png",
+        "item_specifics": {
+            "sku": "GM0006",
+            "Brand": "GM Genuine",
+            "Manufacturer Part Number": "F87Z13008FB",
+            "Other Part Number": [],
+            "Interchange Part Number": [
+                "F87Z-13008-FA"
+            ],
+            "Placement on Vehicle": [
+                "Left Front, Left Driver Side"
+            ],
+            "Condition": "New",
+            "Material": "Polycarbonate plastic",
+            "Warranty": "Inquire to check",
+            "Country/Region of Manufacture": "Ford Motor Company",
+            "OEM or Aftermarket": "Genuine",
+            "Surface Finish": "Smooth",
+            "Fitment Type": "Direct Replacement",
+            "UPC": ""
+        },
+        "pricing": {
+            "price": 224.23,
+            "price_info": "*Prices reflects the latest compared average online market values for Genuine GM Genuine Driver Side Headlamp Assembly. Inquiry is recommended to confirm compatibility, Affordable Aftermarket replacement options and final pricing.",
+            "currency": "AED",
+            "discounted_price": 0,
+            "offer": "0% OFF"
+        },
+        "policies": {
+            "shipping": "Standard Shipping (3-5 Business Days)",
+            "delivery": "Delivery available in UAE",
+            "returns": "",
+            "payment_methods": [
+                "Cash on Delivery"
+            ]
+        }
     }
 ]
