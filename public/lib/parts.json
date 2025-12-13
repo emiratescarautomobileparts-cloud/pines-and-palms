@@ -2031,5 +2031,47 @@
         "category": "Suspension & Steering Parts",
         "description": "",
         "img": "/img/parts/car-spare-parts.png"
+    },
+    {
+        "id": 285,
+        "parts": "AC Filter",
+        "category": "AC & Heating (HVAC)",
+        "description": "",
+        "img": "/img/parts/car-spare-parts.png"
+    },
+    {
+        "id": 286,
+        "parts": "Brake Disc",
+        "category": "Brakes & ABS Parts",
+        "description": "",
+        "img": "/img/parts/car-spare-parts.png"
+    },
+    {
+        "id": 287,
+        "parts": "Fuel Filter",
+        "category": "Filters (Air, Oil, Fuel, Cabin)",
+        "description": "",
+        "img": "/img/parts/car-spare-parts.png"
+    },
+    {
+        "id": 288,
+        "parts": "Engine Gasket",
+        "category": "Engine Parts",
+        "description": "",
+        "img": "/img/parts/car-spare-parts.png"
+    },
+    {
+        "id": 289,
+        "parts": "Transmission Gear Filter",
+        "category": "Filters (Air, Oil, Fuel, Cabin)",
+        "description": "",
+        "img": "/img/parts/car-spare-parts.png"
+    },
+    {
+        "id": 290,
+        "parts": "Oil Filter",
+        "category": "Filters (Air, Oil, Fuel, Cabin)",
+        "description": "",
+        "img": "/img/parts/car-spare-parts.png"
     }
 ]
